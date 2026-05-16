@@ -177,3 +177,113 @@ where salary < 50000;
 select *
 from Employees
 where experience>5;
+
+--Logical Operators
+--Find employees from IT department AND salary greater than 70000.
+select *
+from Employees
+where department='IT' and salary>70000;
+
+--Find employees from Hyderabad OR Bangalore.
+select *
+from Employees
+where city='Hyderabad' or city='Bangalore';
+
+--Find employees from HR department AND experience less than 3.
+select *
+from Employees
+where department='HR' and experience<3;
+
+--Find employees with salary greater than 60000 OR experience greater than 6.
+select *
+from Employees
+where salary>60000 or experience>3;
+
+--Find employees NOT from Sales department.
+select *
+from Employees
+where not department='Sales';
+select *
+from Employees
+where department<>'Sales';
+
+--IN AND NOT IN
+--Find employees working in ('Hyderabad', 'Mumbai').
+select *
+from Employees
+where city in ('Hyderabad','Mumbai');
+
+--Find employees whose department IN ('IT', 'Finance').
+select *
+from Employees
+where department in ('IT', 'Finance');
+
+--Find employees whose city NOT IN ('Chennai', 'Pune').
+select *
+from Employees
+where city not in('Chennai','Pune');
+
+--Find employees whose salary IN (45000, 75000, 91000).
+select *
+from Employees
+where salary in (45000, 75000, 91000);
+
+--Find employees whose department NOT IN ('HR', 'Sales').
+select *
+from Employees
+where department not in ('HR','Sales');
+
+--BETWEEN
+--Find employees with salary BETWEEN 50000 AND 80000.
+select *
+from Employees
+where salary between 50000 and 80000;
+select *
+from Employees
+where salary>=50000 and salary<=80000;
+
+--Find employees with experience BETWEEN 3 AND 6.
+select *
+from Employees
+where experience between 3 and 6;
+
+--Find employees whose emp_id BETWEEN 105 AND 112.
+select *
+from Employees
+where emp_id between 105 and 112;
+
+--Find employees with salary NOT BETWEEN 40000 AND 60000.
+select *
+from Employees
+where not salary  between 40000 and 60000;
+
+--Find employees with experience BETWEEN 2 AND 4.
+select *
+from Employees
+where experience between 2 and 4;
+
+--LIKE OPERATOR
+--Find employees whose names start with 'R'.
+select *
+from Employees
+where emp_name like 'R%';
+
+--Find employees whose names end with 'a'.
+select *
+from Employees
+where emp_name like '%a';
+
+--Find employees whose names contain 'v'.
+select *
+from Employees
+where emp_name like '%v%';
+
+--Find employees whose city starts with 'B'.
+select *
+from Employees
+where city like 'B%';
+
+--Find employees whose department ends with 's'.
+select *
+from Employees
+where department like '%s';
